@@ -86,10 +86,18 @@ body {
 
 .imagen_grande {
   flex: 1;
-  max-width: 50%; /* Ajusta según sea necesario */
-  height: auto;
-  background: url('./imgDAW/v40_56.png') no-repeat center center;
+  max-width: 100%; /* Ajusta según sea necesario */
+  height: 500px;
+  background: url('./imgDAW/v40_56.png') no-repeat center;
   background-size: contain;
+}
+
+.main-content{  
+  display: flex; /* Flexbox para alinear los elementos uno al lado del otro */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Deja espacio entre el texto y la imagen */
+  padding: 40px;
+  gap: 20px; /* Espacio entre texto e imagen */
 }
 
 footer {
