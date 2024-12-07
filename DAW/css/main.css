@@ -1,0 +1,147 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  margin-bottom: 15%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  background: url('../imgDAW/Screenshot_2.png') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 20px;
+  margin-left: 6%;
+  margin-top: 0.7%;
+}
+
+.left-section h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.left-section p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 15%;
+}
+
+.right-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reset-password {
+  font-size: 14px;
+  color: #6c63ff;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+}
+
+.login-button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #514ae4;
+}
+
+.or-text {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.google-login img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.google-login {
+  text-align: center;
+  background-size: contain;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #6c63ff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-section a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+footer .footer-section a:hover {
+  text-decoration: underline;
+}

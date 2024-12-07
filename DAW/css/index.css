@@ -1,0 +1,120 @@
+/* index.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 90px;
+  background-color: white;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  background: url('../imgDAW/Screenshot_2.png') no-repeat center center;
+  background-size: cover;
+}
+
+.empresa {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-left: 10px;
+}
+
+.Productos,
+.Ayuda,
+.Contacto {
+  font-size: 16px;
+  color: black;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.Productos:hover,
+.Ayuda:hover,
+.Contacto:hover {
+  text-decoration: underline;
+}
+
+.Iniciar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.Iniciar a{
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  background-color: #5a47cc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Iniciar a:hover{
+  background-color: #4738a3;
+}
+
+.contenido {
+  text-align: left;
+  margin: 40px 20px;
+}
+
+.contenido span:first-child {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.contenido span:last-child {
+  display: inline-block;
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.imagen_grande {
+  flex: 1;
+  max-width: 100%; /* Ajusta según sea necesario */
+  height: 500px;
+  background: url('../imgDAW/v40_56.png') no-repeat center;
+  background-size: contain;
+}
+
+.main-content{  
+  display: flex; /* Flexbox para alinear los elementos uno al lado del otro */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Deja espacio entre el texto y la imagen */
+  padding: 40px;
+  gap: 20px; /* Espacio entre texto e imagen */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #5a47cc;
+  color: white;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
