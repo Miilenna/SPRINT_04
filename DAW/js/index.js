@@ -1,29 +1,37 @@
 document.querySelector(".login-button").addEventListener("click", function(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+    event.preventDefault();
 
     const username = document.querySelector("input[type='text']").value;
     const password = document.querySelector("input[type='password']").value;
 
-    fetch("http://localhost:8000/user/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password })
+    fetch(`http://localhost:8080/users/getUsername/${username}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" }
     })
     .then(response => {
         if (!response.ok) {
             throw new Error("Invalid credentials");
         }
-        return response.json();
+        return response.text(); 
     })
-    .then(data => {
-        alert("Login successful!");
-        // Redirigir según el rol del usuario
-        if (data.role === "admin") {
-            window.location.href = "./admin.html";
-        } else if (data.role === "prof") {
-            window.location.href = "./profesor.html";
-        } else {
-            window.location.href = "./alumno.html";
+    .then(text => {
+        console.log("Raw response text:", text); 
+        try {
+            const data = JSON.parse(text);
+            if (data.password !== password) {
+                throw new Error("Invalid credentials");
+            }
+            alert("Login successful!");
+            if (data.role === "admin") {
+                window.location.href = "./admin.html";
+            } else if (data.role === "prof") {
+                window.location.href = "./profesor.html";
+            } else {
+                window.location.href = "./alumno.html";
+            }
+        } catch (e) {
+            console.error("Error parsing JSON:", e);
+            alert("Error en las credenciales");
         }
     })
     .catch(error => {
