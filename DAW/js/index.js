@@ -4,10 +4,10 @@ document.querySelector(".login-button").addEventListener("click", function(event
     const username = document.querySelector("input[type='text']").value;
     const password = document.querySelector("input[type='password']").value;
 
-    fetch("http://localhost:8000/user/login", {
+    // La solicitud GET no debe tener un body
+    fetch(`http://7e2a-85-192-78-20.ngrok-free.app/user/getUsername/${username}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password })
+        headers: { "Content-Type": "application/json" }
     })
     .then(response => {
         if (!response.ok) {
@@ -16,14 +16,22 @@ document.querySelector(".login-button").addEventListener("click", function(event
         return response.json();
     })
     .then(data => {
-        alert("Login successful!");
-        // Redirigir según el rol del usuario
-        if (data.role === "admin") {
-            window.location.href = "./admin.html";
-        } else if (data.role === "prof") {
-            window.location.href = "./profesor.html";
+        // Verifica que la contraseña introducida coincida con la almacenada
+        if (data.password === password) {
+            alert("Login successful!");
+
+            // Redirigir según el rol del usuario
+            if (data.rol === "alumn") {
+                window.location.href = "/SPRINT_04/DAW/html/alumno.html";
+            } else if (data.rol === "prof") {
+                window.location.href = "/SPRINT_04/DAW/html/profesor.html";
+            } else if (data.rol === "admin") {
+                window.location.href = "/SPRINT_04/DAW/html/admin.html";
+            } else {
+                alert("Rol desconocido");
+            }
         } else {
-            window.location.href = "./alumno.html";
+            throw new Error("Invalid password");
         }
     })
     .catch(error => {
