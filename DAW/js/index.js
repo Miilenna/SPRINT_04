@@ -4,37 +4,33 @@ document.querySelector(".login-button").addEventListener("click", function(event
     const username = document.querySelector("input[type='text']").value;
     const password = document.querySelector("input[type='password']").value;
 
-    // La solicitud GET no debe tener un body
-    fetch(`http://7e2a-85-192-78-20.ngrok-free.app/user/getUsername/${username}`, {
-        method: "POST",
+    fetch(`http://localhost:8000/users/getUsername/${username}`, {
+        method: "GET",
         headers: { "Content-Type": "application/json" }
     })
     .then(response => {
         if (!response.ok) {
             throw new Error("Invalid credentials");
         }
-        return response.text(); 
+        return response.json(); // Cambiar a .json() si la respuesta es JSON
     })
-    .then(text => {
-        console.log("Raw response text:", text); 
-        try {
-            const data = JSON.parse(text);
-            if (data.password !== password) {
-                throw new Error("Invalid credentials");
-            }
-            alert("Login successful!");
-            if (data.role === "admin") {
-                window.location.href = "./admin.html";
-            } else if (data.role === "prof") {
-                window.location.href = "./profesor.html";
-            } else {
-                window.location.href = "./alumno.html";
-            }
-        } catch (e) {
-            console.error("Error parsing JSON:", e);
-            alert("Error en las credenciales");
+    .then(data => {
+        console.log(data); // Verifica la estructura del objeto
+        if (data.password !== password) {
+            throw new Error("Invalid credentials");
         }
-    })
+        // Guardar el nombre del usuario (usa 'username' en lugar de 'name')
+        localStorage.setItem("name", data.username); // Cambia a 'data.username'
+        
+        // Redirigir según el rol
+        if (data.role === "admin") {
+            window.location.href = "admin.html";
+        } else if (data.role === "prof") {
+            window.location.href = "profesor.html";
+        } else {
+            window.location.href = "alumno.html";
+        }
+    })    
     .catch(error => {
         console.error("Error:", error);
         alert("Error en las credenciales");
