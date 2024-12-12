@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir/Editar Alumno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/add_alumn.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>ITICBCN Institut TIC de Barcelona</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>Alumnos</li>
+          <li><a href="./add_profe.html">Profesores</a></li>
+          <li><a href="./inicio.html">Log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <header class="header">
+        <h1>Administrador</h1>
+        <div class="user-info">
+            <span id="adminName"></span>
+            <div class="profile-circle">M</div>
+        </div>          
+      </header>
+      <section class="form-section">
+        <h2>Añadir o Editar Alumno</h2>
+        <form id="studentForm">
+          <label>
+            Nombre del alumno:
+            <input type="text" id="nombre" placeholder="Introduce un nombre" required>
+          </label>
+          <label>
+            Apellido del alumno:
+            <input type="text" id="apellido" placeholder="Introduce un apellido" required>
+          </label>
+          <label>
+            Nombre de usuario:
+            <input type="text" id="usuario" placeholder="Introduce un nombre de usuario" required>
+          </label>
+          <label>
+            DNI:
+            <input type="text" id="dni" placeholder="Introduce un DNI" required>
+          </label>
+          <label>
+            Contraseña:
+            <input type="text" id="contraseña" placeholder="Introduce una contraseña" required>
+          </label>
+          <label>
+            Email:
+            <input type="email" id="email" placeholder="Introduce un email" required>
+          </label>
+          <label>
+            Grupo:
+            <input type="text" id="groups" placeholder="Introduce un grupo" required>
+          </label>
+          <div class="buttons">
+            <button type="button" id="cancelButton" class="cancel">Cancelar</button>
+            <button type="submit" id="submitButton" class="confirm">Confirmar</button>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <div class="footer-section">
+          <a href="#">Políticas de privacidad</a>
+          <a href="#">Redes sociales (Instagram, LinkedIn, Facebook, Twitter)</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/add_alumn.js"></script>
+</body>
+</html>
