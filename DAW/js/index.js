@@ -23,9 +23,9 @@ document.querySelector(".login-button").addEventListener("click", function(event
         localStorage.setItem("name", data.username); // Cambia a 'data.username'
         
         // Redirigir según el rol
-        if (data.role === "admin") {
+        if (data.rol === "admin") {
             window.location.href = "admin.html";
-        } else if (data.role === "prof") {
+        } else if (data.rol === "prof") {
             window.location.href = "profesor.html";
         } else {
             window.location.href = "alumno.html";
