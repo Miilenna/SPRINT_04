@@ -4,8 +4,6 @@ Para conseguir hacer la conexión de la base de datos con la web, tenemos que cr
 
 ## APP ANDROID
 
-### Fragments de la APP
-
 ### Fragment Top
 Barra superior de toda la app
   
