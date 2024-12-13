@@ -19,7 +19,7 @@ Barra inferior apartado profesor
   
 ![FBotPr](./DAM/imatges/FBPr.png)
 
-### Fragment Bottom Admin
+### Fragment Bottom Administrador
 Barra inferior apartado administrador
   
 ![FBotAd](./DAM/imatges/FBAd.png)
