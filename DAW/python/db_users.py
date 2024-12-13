@@ -127,7 +127,7 @@ def authenticate_user(username, password):
     try:
         conn = db_client()
         cur = conn.cursor()
-        cur.execute("SELECT password FROM users WHERE username = %s and password= %s", (username,))
+        cur.execute("SELECT password FROM users WHERE username = %s", (username,))
         user = cur.fetchone()
         cur.close()
         conn.close()
