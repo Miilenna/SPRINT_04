@@ -10,17 +10,17 @@ Barra superior de toda la app
 ![Ftop](./DAM/imatges/FTop.png)
 
 ### Fragment Bottom Alumno
-Menu inferior apartado alumno
+Barra inferior apartado alumno
   
 ![FBotAl](./DAM/imatges/FBAl.png)
 
 ### Fragment Bottom Profesor
-Menu inferior apartado profesor
+Barra inferior apartado profesor
   
 ![FBotPr](./DAM/imatges/FBPr.png)
 
 ### Fragment Bottom Admin
-Menu inferior apartado administrador
+Barra inferior apartado administrador
   
 ![FBotAd](./DAM/imatges/FBAd.png)
 
