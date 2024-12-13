@@ -14,17 +14,17 @@ Barra superior de toda la app
 ### Fragment Bottom Alumno
 Menu inferior apartado alumno
   
-![FBotAl](./DAM/imatges/FBotAl.png)
+![FBotAl](./DAM/imatges/FBAl.png)
 
 ### Fragment Bottom Profesor
 Menu inferior apartado profesor
   
-![FBotPr](./DAM/imatges/FBotPr.png)
+![FBotPr](./DAM/imatges/FBPr.png)
 
 ### Fragment Bottom Admin
 Menu inferior apartado administrador
   
-![FBotAd](./DAM/imatges/FBotAd.png)
+![FBotAd](./DAM/imatges/FBAd.png)
 
 ### Logi
 El login tiene un campo para poner el mail, y uno para su contraseña. También se podría realizar el login con el correo corporativo. También existe la opción de recuperar la contraseña.
