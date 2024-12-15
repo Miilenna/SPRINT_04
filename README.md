@@ -11,7 +11,8 @@ En la página de inicio de sesión dependiendo que usuario ponemos nos lleva a l
 ![johndoe](DAW/imgDAW/johndoe.png)
 
 ## Páginas principales
-La página del alumno tiene esta página como principal. Podemos ver que arriba pone el nombre del usuario que se ha recogido de la base de datos. Y lo mismo con la página del profesor y del administrador.
+La página del alumno tiene esta página como principal. Podemos ver que arriba pone el nombre del usuario que se ha recogido de la base de datos. Y lo mismo con la página del profesor y del administrador. Todas las páginas tienen un log out que nos lleva a la página de inicio de sesión.
+
 ### Alumno:
 ![alumno](DAW/imgDAW/Screenshot_3.png)
 ### Profesor:
@@ -24,8 +25,6 @@ En la página del administrador podemos ir a la página para añadir alumnos o p
 ![add alumne](DAW/imgDAW/Screenshot_6.png)
 ![add profesor](DAW/imgDAW/Screenshot_7.png)
 
-## Página log out
-Por último, todas las páginas tienen un log out que nos lleva a la página de inicio de sesión.
 
 ## APP ANDROID
 
